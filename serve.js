@@ -6,6 +6,10 @@ app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
+app.get("/webpack", function(req, res) {
+  res.sendFile(path.join(__dirname, "dist", "webpack.html"));
+});
+
 console.log(">>>");
 
 app.listen(9000);

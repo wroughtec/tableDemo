@@ -5,23 +5,32 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "@material-ui/core": "^4.7.0",
-    "@material-ui/icons": "^4.5.1",
-    "@material-ui/lab": "^4.0.0-alpha.33",
-    "@material-ui/styles": "^4.6.0",
-    "express": "^4.17.1",
-    "mui-datatables": "2.13.0",
+    "@material-ui/core": "4.7.1",
+    "@material-ui/icons": "4.5.1",
+    "@material-ui/lab": "4.0.0-alpha.34",
+    "@material-ui/styles": "4.7.1",
+    "express": "4.17.1",
+    "mui-datatables": "2.13.1",
     "react": "16.12.0",
     "react-dom": "16.12.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.1",
-    "parcel-bundler": "^1.12.4",
-    "typescript": "3.7.2"
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "nodemon": "2.0.1",
+    "parcel-bundler": "1.12.4",
+    "typescript": "3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
   },
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
+    "webpack:dev": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "webpack:prod": "webpack --config ./webpack.config.js --mode production",
     "serve": "nodemon ./serve.js"
   },
   "browserslist": [
